@@ -1,0 +1,41 @@
+# Virtual Environments
+venv/
+env/
+
+# Datasets and CSVs
+data/
+*.csv
+
+# Models (all .pkl files)
+models/*.pkl
+models/*.joblib
+
+# Outputs (all plots and charts)
+outputs/
+
+# Python caching
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Audio files
+*.wav
+*.mp3
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Misc / OS specific
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Temp scripts
+run_predictions.py

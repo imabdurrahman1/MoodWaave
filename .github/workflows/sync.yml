@@ -2,15 +2,22 @@ name: Sync to Hugging Face Hub
 on:
   push:
     branches: [main]
+
+  workflow_dispatch:
+
 jobs:
-  sync:
+  sync-to-hub:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: huggingface/hub-sync@v0.1.0
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
-          github_repo_id: ${{ github.repository }}
-          huggingface_repo_id: imabdurrahman1/MoodWaave
-          repo_type: space
-          space_sdk: streamlit
-          hf_token: ${{ secrets.HF_TOKEN }}
+          fetch-depth: 0
+          lfs: true
+          
+      - name: Push to Hugging Face Spaces
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git remote add space https://imabdurrahman1:$HF_TOKEN@huggingface.co/spaces/imabdurrahman1/MoodWaave
+          git push --force space main

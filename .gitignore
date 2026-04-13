@@ -39,3 +39,8 @@ Thumbs.db
 
 # Temp scripts
 run_predictions.py
+
+#project biblio
+MUSIC_ML_PROJECT_BIBLIOGRAPHY.md
+PROJECT_BIBLIOGRAPHY.md
+upload_models_to_hf.py

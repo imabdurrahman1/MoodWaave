@@ -15,9 +15,9 @@ from matplotlib.patches import Circle
 sys.path.append(os.path.join(os.getcwd(), 'src'))
 from pipeline import predict_song, load_models
 
-# --- Model Download (For HF Spaces) ---
+#  Model Download (For HF Spaces) 
 def download_models():
-    REPO_ID = "YOUR_HF_USERNAME/moodwave-models" # Update this after upload
+    REPO_ID = "imabdurrahman1/MoodWaave-models"
     files = [
         "genre_classifier.pkl", "genre_scaler.pkl", "genre_encoder.pkl",
         "mood_regressor.pkl", "mood_scaler.pkl"
@@ -317,7 +317,7 @@ if uploaded_files:
     progress_bar.empty()
 
     if results:
-        # --- Batch View ---
+        #  Batch View 
         if len(results) == 1:
             result = results[0]
             # 3-Column Results for Single File

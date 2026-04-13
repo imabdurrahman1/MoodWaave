@@ -107,6 +107,17 @@ MOODWAAVE/
 ## License
 This project is licensed under the **MIT License** - see the LICENSE file for details.
 
+## Hugging Face Configuration Block
+---
+title: MoodWaave
+emoji: 🎧
+colorFrom: yellow
+colorTo: red
+sdk: streamlit
+app_file: src/app.py
+pinned: false
+---
+
 ## Author
 **Abdur Rahman M**
 *   **Institution:** VIT Vellore
